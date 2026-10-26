@@ -1,6 +1,6 @@
-# DataSentinel — Autonomous Dataset Quality Engineer
+#  — Autonomous Dataset Quality Engineer
 
-DataSentinel is a Python-first academic prototype that profiles tabular datasets, flags data-quality and ML-readiness risks, explains findings, and supports a reproducible cleaning workflow.
+Qualyze is a Python-first academic prototype that profiles tabular datasets, flags data-quality and ML-readiness risks, explains findings, and supports a reproducible cleaning workflow.
 
 ## MVP features
 
@@ -18,7 +18,7 @@ DataSentinel is a Python-first academic prototype that profiles tabular datasets
 
 ## Research and novelty note
 
-DataSentinel is an integration and decision-support prototype, not a claim that dataset profiling is a new research field. Existing systems include Great Expectations, Evidently, whylogs, Cleanlab, and IBM's Data Quality Toolkit. A defensible research contribution should be established through a focused literature review and reproducible experiments.
+Qualyze is an integration and decision-support prototype, not a claim that dataset profiling is a new research field. Existing systems include Great Expectations, Evidently, whylogs, Cleanlab, and IBM's Data Quality Toolkit. A defensible research contribution should be established through a focused literature review and reproducible experiments.
 
 Potential project study: compare rule-based checks with an ML-readiness workflow on multiple datasets, measuring detection precision/recall for injected known issues, runtime, and usefulness of recommendations. Separate synthetic injected issues from real-world findings.
 
@@ -63,18 +63,18 @@ Open the local URL printed by Streamlit, normally `http://localhost:8501`.
 ## Docker
 
 ```bash
-docker build -t datasentinel .
-docker run --rm -p 8501:8501 datasentinel
+docker build -t Qualyze .
+docker run --rm -p 8501:8501 Qualyze
 ```
 
 ## Input format
 
-Upload a CSV file. The target column is optional; if provided and present in the dataset, DataSentinel performs additional target-related checks. The included sample file uses `churn` as its target.
+Upload a CSV file. The target column is optional; if provided and present in the dataset, Qualyze performs additional target-related checks. The included sample file uses `churn` as its target.
 
 ## Project structure
 
 ```text
-datasentinel/
+Qualyze/
 ├── app.py
 ├── generate_sample_data.py
 ├── requirements.txt
@@ -82,7 +82,7 @@ datasentinel/
 ├── README.md
 ├── data/
 │   └── sample_customers.csv
-├── datasentinel/
+├── Qualyze/
 │   ├── __init__.py
 │   ├── audit.py
 │   ├── cleaning.py
